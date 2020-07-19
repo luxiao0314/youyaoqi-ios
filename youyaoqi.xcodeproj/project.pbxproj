@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		65F21BDF24C3E73E0062D930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F21BDD24C3E73E0062D930 /* LaunchScreen.storyboard */; };
 		65F21BEA24C3E73E0062D930 /* youyaoqiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BE924C3E73E0062D930 /* youyaoqiTests.swift */; };
 		65F21BF524C3E73E0062D930 /* youyaoqiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BF424C3E73E0062D930 /* youyaoqiUITests.swift */; };
+		AEA8AA73F21726FC48C5381F /* Pods_youyaoqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA56212E1B30672CD779A271 /* Pods_youyaoqi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		65F21BF024C3E73E0062D930 /* youyaoqiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = youyaoqiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F21BF424C3E73E0062D930 /* youyaoqiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youyaoqiUITests.swift; sourceTree = "<group>"; };
 		65F21BF624C3E73E0062D930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D894F94FDD87EE94810986B7 /* Pods-youyaoqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youyaoqi.debug.xcconfig"; path = "Target Support Files/Pods-youyaoqi/Pods-youyaoqi.debug.xcconfig"; sourceTree = "<group>"; };
+		DBD9B1FA68F93FB12B957E12 /* Pods-youyaoqi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youyaoqi.release.xcconfig"; path = "Target Support Files/Pods-youyaoqi/Pods-youyaoqi.release.xcconfig"; sourceTree = "<group>"; };
+		EA56212E1B30672CD779A271 /* Pods_youyaoqi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youyaoqi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA8AA73F21726FC48C5381F /* Pods_youyaoqi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29C838551AC6226F8AF87323 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA56212E1B30672CD779A271 /* Pods_youyaoqi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65F21BC624C3E73D0062D930 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,8 @@
 				65F21BE824C3E73E0062D930 /* youyaoqiTests */,
 				65F21BF324C3E73E0062D930 /* youyaoqiUITests */,
 				65F21BD024C3E73D0062D930 /* Products */,
+				B5AEEEF70B386380FBBF3916 /* Pods */,
+				29C838551AC6226F8AF87323 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +151,15 @@
 			path = youyaoqiUITests;
 			sourceTree = "<group>";
 		};
+		B5AEEEF70B386380FBBF3916 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D894F94FDD87EE94810986B7 /* Pods-youyaoqi.debug.xcconfig */,
+				DBD9B1FA68F93FB12B957E12 /* Pods-youyaoqi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65F21BF924C3E73E0062D930 /* Build configuration list for PBXNativeTarget "youyaoqi" */;
 			buildPhases = (
+				1998545C1141D06C78D08B28 /* [CP] Check Pods Manifest.lock */,
 				65F21BCB24C3E73D0062D930 /* Sources */,
 				65F21BCC24C3E73D0062D930 /* Frameworks */,
 				65F21BCD24C3E73D0062D930 /* Resources */,
+				62D7A61D021B78CE1B8492CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +287,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1998545C1141D06C78D08B28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-youyaoqi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62D7A61D021B78CE1B8492CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-youyaoqi/Pods-youyaoqi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-youyaoqi/Pods-youyaoqi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-youyaoqi/Pods-youyaoqi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65F21BCB24C3E73D0062D930 /* Sources */ = {
@@ -432,6 +500,7 @@
 		};
 		65F21BFA24C3E73E0062D930 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D894F94FDD87EE94810986B7 /* Pods-youyaoqi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +508,7 @@
 				DEVELOPMENT_TEAM = E7UZHBF7AY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = youyaoqi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,12 +516,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucio.youyaoqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		65F21BFB24C3E73E0062D930 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBD9B1FA68F93FB12B957E12 /* Pods-youyaoqi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +530,7 @@
 				DEVELOPMENT_TEAM = E7UZHBF7AY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = youyaoqi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,7 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucio.youyaoqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

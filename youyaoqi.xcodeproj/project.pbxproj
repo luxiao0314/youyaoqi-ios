@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6500098D24C3EEB1007D6BB3 /* UTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500098C24C3EEB1007D6BB3 /* UTabBarController.swift */; };
+		6500098F24C3EF8A007D6BB3 /* UNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500098E24C3EF8A007D6BB3 /* UNavigationController.swift */; };
+		6500099124C3F4AD007D6BB3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500099024C3F4AD007D6BB3 /* UIColorExtension.swift */; };
+		6500099424C3F6EF007D6BB3 /* UCateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500099324C3F6EF007D6BB3 /* UCateListViewController.swift */; };
+		6500099624C3F70F007D6BB3 /* UBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500099524C3F70F007D6BB3 /* UBaseViewController.swift */; };
+		6500099824C3F753007D6BB3 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500099724C3F753007D6BB3 /* Global.swift */; };
 		65F21BD324C3E73D0062D930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BD224C3E73D0062D930 /* AppDelegate.swift */; };
 		65F21BD524C3E73D0062D930 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BD424C3E73D0062D930 /* SceneDelegate.swift */; };
-		65F21BD724C3E73D0062D930 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BD624C3E73D0062D930 /* ContentView.swift */; };
 		65F21BD924C3E73E0062D930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F21BD824C3E73E0062D930 /* Assets.xcassets */; };
 		65F21BDC24C3E73E0062D930 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F21BDB24C3E73E0062D930 /* Preview Assets.xcassets */; };
 		65F21BDF24C3E73E0062D930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F21BDD24C3E73E0062D930 /* LaunchScreen.storyboard */; };
@@ -36,10 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6500098C24C3EEB1007D6BB3 /* UTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTabBarController.swift; sourceTree = "<group>"; };
+		6500098E24C3EF8A007D6BB3 /* UNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationController.swift; sourceTree = "<group>"; };
+		6500099024C3F4AD007D6BB3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		6500099324C3F6EF007D6BB3 /* UCateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCateListViewController.swift; sourceTree = "<group>"; };
+		6500099524C3F70F007D6BB3 /* UBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseViewController.swift; sourceTree = "<group>"; };
+		6500099724C3F753007D6BB3 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		65F21BCF24C3E73D0062D930 /* youyaoqi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youyaoqi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F21BD224C3E73D0062D930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65F21BD424C3E73D0062D930 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		65F21BD624C3E73D0062D930 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		65F21BD824C3E73E0062D930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F21BDB24C3E73E0062D930 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65F21BDE24C3E73E0062D930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +99,73 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6500098524C3ECF4007D6BB3 /* Procedure */ = {
+			isa = PBXGroup;
+			children = (
+				6500099224C3F6E5007D6BB3 /* Cate */,
+				6500098924C3EE8B007D6BB3 /* Base */,
+				65F21BD224C3E73D0062D930 /* AppDelegate.swift */,
+				6500099724C3F753007D6BB3 /* Global.swift */,
+			);
+			path = Procedure;
+			sourceTree = "<group>";
+		};
+		6500098624C3ED07007D6BB3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6500098724C3ED11007D6BB3 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		6500098824C3ED19007D6BB3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6500099024C3F4AD007D6BB3 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6500098924C3EE8B007D6BB3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6500098B24C3EE98007D6BB3 /* ViewController */,
+				6500098A24C3EE94007D6BB3 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6500098A24C3EE94007D6BB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6500098B24C3EE98007D6BB3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6500098C24C3EEB1007D6BB3 /* UTabBarController.swift */,
+				6500098E24C3EF8A007D6BB3 /* UNavigationController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6500099224C3F6E5007D6BB3 /* Cate */ = {
+			isa = PBXGroup;
+			children = (
+				6500099324C3F6EF007D6BB3 /* UCateListViewController.swift */,
+				6500099524C3F70F007D6BB3 /* UBaseViewController.swift */,
+			);
+			path = Cate;
+			sourceTree = "<group>";
+		};
 		65F21BC624C3E73D0062D930 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +191,11 @@
 		65F21BD124C3E73D0062D930 /* youyaoqi */ = {
 			isa = PBXGroup;
 			children = (
-				65F21BD224C3E73D0062D930 /* AppDelegate.swift */,
+				6500098824C3ED19007D6BB3 /* Extension */,
+				6500098724C3ED11007D6BB3 /* Component */,
+				6500098624C3ED07007D6BB3 /* API */,
+				6500098524C3ECF4007D6BB3 /* Procedure */,
 				65F21BD424C3E73D0062D930 /* SceneDelegate.swift */,
-				65F21BD624C3E73D0062D930 /* ContentView.swift */,
 				65F21BD824C3E73E0062D930 /* Assets.xcassets */,
 				65F21BDD24C3E73E0062D930 /* LaunchScreen.storyboard */,
 				65F21BE024C3E73E0062D930 /* Info.plist */,
@@ -337,7 +416,12 @@
 			files = (
 				65F21BD324C3E73D0062D930 /* AppDelegate.swift in Sources */,
 				65F21BD524C3E73D0062D930 /* SceneDelegate.swift in Sources */,
-				65F21BD724C3E73D0062D930 /* ContentView.swift in Sources */,
+				6500099624C3F70F007D6BB3 /* UBaseViewController.swift in Sources */,
+				6500098F24C3EF8A007D6BB3 /* UNavigationController.swift in Sources */,
+				6500098D24C3EEB1007D6BB3 /* UTabBarController.swift in Sources */,
+				6500099424C3F6EF007D6BB3 /* UCateListViewController.swift in Sources */,
+				6500099124C3F4AD007D6BB3 /* UIColorExtension.swift in Sources */,
+				6500099824C3F753007D6BB3 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

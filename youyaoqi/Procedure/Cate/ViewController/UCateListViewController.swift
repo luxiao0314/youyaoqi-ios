@@ -17,33 +17,27 @@ class UCateListViewController: UBaseViewController {
     private var rankList = [RankingModel]()
     
     override func viewDidLoad() {
-        edgesForExtendedLayout = .top
+        super.viewDidLoad()
+        
         loadData()
     }
     
     override func configUI() {
-        let titileLabel = UILabel().then{
-            $0.text = "作品介绍"
-        }
-        view.addSubview(titileLabel)
-        
-        titileLabel.snp.makeConstraints{
-            $0.top.left.right.equalToSuperview().inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
-            $0.height.equalTo(20)
-        }
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
     }
     
-    func loadData() {
+    private func loadData() {
         ApiLoadingProvider.request(UApi.cateList, model: CateListModel.self) { (returnData) in
             self.collectionView.uempty?.allowShow = true
-            self.collectionView.reloadData()
-            self.collectionView.uHead?.endRefreshing()
             
+            self.searchString = returnData?.recommendSearch ?? ""
             self.topList = returnData?.topList ?? []
             self.rankList = returnData?.rankingList ?? []
             
-            self.searchString = returnData?.recommendSearch ?? ""
             self.searchButon.setTitle(self.searchString, for: .normal)
+            self.collectionView.reloadData()
+            self.collectionView.uHead?.endRefreshing()
         }
     }
     
@@ -56,7 +50,7 @@ class UCateListViewController: UBaseViewController {
         sn.setImage(UIImage(named: "nav_search")?.withRenderingMode(.alwaysOriginal), for: .normal)
         sn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         sn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
-//        sn.addTarget(self, action:#selector(searchAction), for: .touchUpInside)
+        //        sn.addTarget(self, action:#selector(searchAction), for: .touchUpInside)
         return sn
     }()
     
@@ -64,22 +58,20 @@ class UCateListViewController: UBaseViewController {
         let lt = UICollectionViewFlowLayout()
         lt.minimumInteritemSpacing = 10
         lt.minimumLineSpacing = 10
-        
         let cw = UICollectionView(frame: CGRect.zero, collectionViewLayout: lt)
         cw.backgroundColor = UIColor.white
         cw.delegate = self
         cw.dataSource = self
         cw.alwaysBounceVertical = true
-        cw.uHead = URefreshHeader { [weak self] in self?.loadData() }
-        cw.uempty = UEmptyView { [weak self] in self?.loadData() }
-        
         cw.register(cellType: URankCCell.self)
         cw.register(cellType: UTopCCell.self)
+        cw.uHead = URefreshHeader { [weak self] in self?.loadData() }
+        cw.uempty = UEmptyView { [weak self] in self?.loadData() }
         return cw
     }()
     
     override func configNavigationBar() {
-//        navigationItem.titleView = searchButon
+        //        navigationItem.titleView = searchButon
         navigationItem.leftBarButtonItem =
             UIBarButtonItem(title: nil,style: .plain,target: nil,action: nil)
         navigationItem.rightBarButtonItem =
@@ -121,29 +113,29 @@ extension UCateListViewController: UICollectionViewDelegateFlowLayout, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if indexPath.section == 0 {
-//            let model = topList[indexPath.row]
-//            var titles: [String] = []
-//            var vcs: [UIViewController] = []
-//            for tab in model.extra?.tabList ?? [] {
-//                guard let tabTitle = tab.tabTitle else { continue }
-//                titles.append(tabTitle)
-//                vcs.append(UComicListViewController(argCon: tab.argCon,
-//                                                    argName: tab.argName,
-//                                                    argValue: tab.argValue))
-//            }
-//            let vc = UPageViewController(titles: titles, vcs: vcs, pageStyle: .topTabBar)
-//            vc.title = model.sortName
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
+        //        if indexPath.section == 0 {
+        //            let model = topList[indexPath.row]
+        //            var titles: [String] = []
+        //            var vcs: [UIViewController] = []
+        //            for tab in model.extra?.tabList ?? [] {
+        //                guard let tabTitle = tab.tabTitle else { continue }
+        //                titles.append(tabTitle)
+        //                vcs.append(UComicListViewController(argCon: tab.argCon,
+        //                                                    argName: tab.argName,
+        //                                                    argValue: tab.argValue))
+        //            }
+        //            let vc = UPageViewController(titles: titles, vcs: vcs, pageStyle: .topTabBar)
+        //            vc.title = model.sortName
+        //            navigationController?.pushViewController(vc, animated: true)
+        //        }
         
-//        if indexPath.section == 1 {
-//            let model = rankList[indexPath.row]
-//            let vc = UComicListViewController(argCon: model.argCon,
-//                                              argName: model.argName,
-//                                              argValue: model.argValue)
-//            vc.title = model.sortName
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
+        //        if indexPath.section == 1 {
+        //            let model = rankList[indexPath.row]
+        //            let vc = UComicListViewController(argCon: model.argCon,
+        //                                              argName: model.argName,
+        //                                              argValue: model.argValue)
+        //            vc.title = model.sortName
+        //            navigationController?.pushViewController(vc, animated: true)
+        //        }
     }
 }

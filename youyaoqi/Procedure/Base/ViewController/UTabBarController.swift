@@ -24,12 +24,12 @@ class UTabBarController: UITabBarController {
                                image: UIImage(named: "tab_class"),
                                selectedImage: UIImage(named: "tab_class_S"))
         
-        let childController = UCateListViewController()
+        let mineVC = UMineViewController()
         
-        addChildViewController(controller: childController,
+        addChildViewController(controller: mineVC,
                                title: "我的",
-                               image: UIImage(named: "tab_class"),
-                               selectedImage: UIImage(named: "tab_class_S"))
+                               image: UIImage(named: "tab_mine"),
+                               selectedImage: UIImage(named: "tab_mine_S"))
     }
     
     func addChildViewController(controller:UIViewController,title:String?,

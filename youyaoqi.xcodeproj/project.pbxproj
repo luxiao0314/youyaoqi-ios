@@ -21,6 +21,11 @@
 		65F21BEA24C3E73E0062D930 /* youyaoqiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BE924C3E73E0062D930 /* youyaoqiTests.swift */; };
 		65F21BF524C3E73E0062D930 /* youyaoqiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BF424C3E73E0062D930 /* youyaoqiUITests.swift */; };
 		AEA8AA73F21726FC48C5381F /* Pods_youyaoqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA56212E1B30672CD779A271 /* Pods_youyaoqi.framework */; };
+		D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439924C5953B00F367FC /* UMineViewController.swift */; };
+		D5A1439D24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */; };
+		D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */; };
+		D5A143A124C59DA600F367FC /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143A024C59DA600F367FC /* ParallaxHeaderMode.swift */; };
+		D5A143A324C59E0100F367FC /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143A224C59E0100F367FC /* UMineHead.swift */; };
 		D5EFF5D624C552CC0069E9E9 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5D524C552CC0069E9E9 /* UAPI.swift */; };
 		D5EFF5D924C553160069E9E9 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5D824C553160069E9E9 /* UModel.swift */; };
 		D5EFF5DC24C566500069E9E9 /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5DB24C566500069E9E9 /* UEmptyDataSet.swift */; };
@@ -74,6 +79,11 @@
 		65F21BF024C3E73E0062D930 /* youyaoqiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = youyaoqiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F21BF424C3E73E0062D930 /* youyaoqiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youyaoqiUITests.swift; sourceTree = "<group>"; };
 		65F21BF624C3E73E0062D930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5A1439924C5953B00F367FC /* UMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
+		D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
+		D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
+		D5A143A024C59DA600F367FC /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
+		D5A143A224C59E0100F367FC /* UMineHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineHead.swift; sourceTree = "<group>"; };
 		D5EFF5D524C552CC0069E9E9 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
 		D5EFF5D824C553160069E9E9 /* UModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UModel.swift; sourceTree = "<group>"; };
 		D5EFF5DB24C566500069E9E9 /* UEmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UEmptyDataSet.swift; path = youyaoqi/Component/EmptyDataSet/UEmptyDataSet.swift; sourceTree = SOURCE_ROOT; };
@@ -130,6 +140,7 @@
 		6500098524C3ECF4007D6BB3 /* Procedure */ = {
 			isa = PBXGroup;
 			children = (
+				D5A1439524C5950A00F367FC /* Mine */,
 				D5EFF5EA24C56CBF0069E9E9 /* Search */,
 				6500099224C3F6E5007D6BB3 /* Cate */,
 				6500098924C3EE8B007D6BB3 /* Base */,
@@ -150,6 +161,7 @@
 		6500098724C3ED11007D6BB3 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				D5A1439B24C59D5C00F367FC /* ParallaxHeader */,
 				D5EFF5F524C56E2C0069E9E9 /* CollectionViewLayout */,
 				D5EFF5DD24C566A80069E9E9 /* Refresh */,
 				D5EFF5DA24C566250069E9E9 /* EmptyDataSet */,
@@ -275,6 +287,41 @@
 				DBD9B1FA68F93FB12B957E12 /* Pods-youyaoqi.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D5A1439524C5950A00F367FC /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1439724C5952000F367FC /* ViewController */,
+				D5A1439624C5951A00F367FC /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		D5A1439624C5951A00F367FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5A143A224C59E0100F367FC /* UMineHead.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5A1439724C5952000F367FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1439924C5953B00F367FC /* UMineViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D5A1439B24C59D5C00F367FC /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */,
+				D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */,
+				D5A143A024C59DA600F367FC /* ParallaxHeaderMode.swift */,
+			);
+			path = ParallaxHeader;
 			sourceTree = "<group>";
 		};
 		D5EFF5D724C553060069E9E9 /* Model */ = {
@@ -533,8 +580,10 @@
 				D5EFF5F224C56DC40069E9E9 /* USearchTFoot.swift in Sources */,
 				65F21BD324C3E73D0062D930 /* AppDelegate.swift in Sources */,
 				D5EFF5E524C5674F0069E9E9 /* URankCCell.swift in Sources */,
+				D5A143A324C59E0100F367FC /* UMineHead.swift in Sources */,
 				D5EFF5DC24C566500069E9E9 /* UEmptyDataSet.swift in Sources */,
 				D5EFF5E324C567350069E9E9 /* UBaseCollectionViewCell.swift in Sources */,
+				D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */,
 				65F21BD524C3E73D0062D930 /* SceneDelegate.swift in Sources */,
 				D5EFF5E924C56AEB0069E9E9 /* UPageViewController.swift in Sources */,
 				D5EFF5E724C567810069E9E9 /* UTopCCell.swift in Sources */,
@@ -543,9 +592,12 @@
 				D5EFF5D624C552CC0069E9E9 /* UAPI.swift in Sources */,
 				D5EFF5F024C56DB00069E9E9 /* USearchTHead.swift in Sources */,
 				6500098F24C3EF8A007D6BB3 /* UNavigationController.swift in Sources */,
+				D5A1439D24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift in Sources */,
 				6500098D24C3EEB1007D6BB3 /* UTabBarController.swift in Sources */,
 				6500099424C3F6EF007D6BB3 /* UCateListViewController.swift in Sources */,
 				D5EFF5FB24C56EA70069E9E9 /* UBaseTableViewCell.swift in Sources */,
+				D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */,
+				D5A143A124C59DA600F367FC /* ParallaxHeaderMode.swift in Sources */,
 				D5EFF5DF24C566B20069E9E9 /* URefresh.swift in Sources */,
 				D5EFF5F924C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				D5EFF5F424C56DF10069E9E9 /* UBaseTableViewHeaderFooterView.swift in Sources */,

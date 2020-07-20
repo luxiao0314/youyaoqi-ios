@@ -44,7 +44,7 @@ enum UApi {
     case vipList//VIP列表
     case subscribeList//订阅列表
     case rankList//排行列表
-
+    
     case cateList//分类列表
     
     case comicList(argCon: Int, argName: String, argValue: Int, page: Int)//漫画列表
@@ -157,6 +157,7 @@ extension MoyaProvider {
                 completion(nil)
                 return
             }
+            print(returnData.data?.returnData as Any,"returnData")
             completion(returnData.data?.returnData)
         })
     }

@@ -16,5 +16,6 @@ pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
 pod 'EmptyDataSet-Swift'
 pod 'UINavigation-SXFixSpace'
+pod 'Toast-Swift', '~> 5.0.1'
 
 end

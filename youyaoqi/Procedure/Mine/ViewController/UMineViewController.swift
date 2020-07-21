@@ -8,6 +8,7 @@
 
 import SnapKit
 import MBProgressHUD
+import Toast_Swift
 
 class UMineViewController: UBaseViewController {
     
@@ -95,8 +96,25 @@ extension UMineViewController: UITableViewDelegate, UITableViewDataSource {
         return myArray[section].count
     }
     
+    /**
+     cell点击事件处理
+     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let sectionArray = myArray[indexPath.section]
+        let dict: [String: String] = sectionArray[indexPath.row]
+        let title = dict["title"]
+        
+        switch indexPath.row {
+        case 0:
+            self.view.makeToast(title)
+            break
+        case 1:
+            self.view.makeToast(title)
+            break
+        default:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -108,8 +126,8 @@ extension UMineViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     /**
-    高度
-    */
+     高度
+     */
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }

@@ -26,6 +26,10 @@
 		D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */; };
 		D5A143A124C59DA600F367FC /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143A024C59DA600F367FC /* ParallaxHeaderMode.swift */; };
 		D5A143A324C59E0100F367FC /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143A224C59E0100F367FC /* UMineHead.swift */; };
+		D5A143A824C689FB00F367FC /* UBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143A724C689FB00F367FC /* UBookViewController.swift */; };
+		D5A143AA24C68AED00F367FC /* UCollectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143A924C68AED00F367FC /* UCollectListViewController.swift */; };
+		D5A143AC24C68B0900F367FC /* UDocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143AB24C68B0900F367FC /* UDocumentListViewController.swift */; };
+		D5A143AE24C68B1A00F367FC /* UDownloadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143AD24C68B1A00F367FC /* UDownloadListViewController.swift */; };
 		D5EFF5D624C552CC0069E9E9 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5D524C552CC0069E9E9 /* UAPI.swift */; };
 		D5EFF5D924C553160069E9E9 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5D824C553160069E9E9 /* UModel.swift */; };
 		D5EFF5DC24C566500069E9E9 /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5DB24C566500069E9E9 /* UEmptyDataSet.swift */; };
@@ -84,6 +88,10 @@
 		D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
 		D5A143A024C59DA600F367FC /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
 		D5A143A224C59E0100F367FC /* UMineHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineHead.swift; sourceTree = "<group>"; };
+		D5A143A724C689FB00F367FC /* UBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBookViewController.swift; sourceTree = "<group>"; };
+		D5A143A924C68AED00F367FC /* UCollectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectListViewController.swift; sourceTree = "<group>"; };
+		D5A143AB24C68B0900F367FC /* UDocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDocumentListViewController.swift; sourceTree = "<group>"; };
+		D5A143AD24C68B1A00F367FC /* UDownloadListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDownloadListViewController.swift; sourceTree = "<group>"; };
 		D5EFF5D524C552CC0069E9E9 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
 		D5EFF5D824C553160069E9E9 /* UModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UModel.swift; sourceTree = "<group>"; };
 		D5EFF5DB24C566500069E9E9 /* UEmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UEmptyDataSet.swift; path = youyaoqi/Component/EmptyDataSet/UEmptyDataSet.swift; sourceTree = SOURCE_ROOT; };
@@ -140,6 +148,7 @@
 		6500098524C3ECF4007D6BB3 /* Procedure */ = {
 			isa = PBXGroup;
 			children = (
+				D5A143A424C689DA00F367FC /* book */,
 				D5A1439524C5950A00F367FC /* Mine */,
 				D5EFF5EA24C56CBF0069E9E9 /* Search */,
 				6500099224C3F6E5007D6BB3 /* Cate */,
@@ -322,6 +331,33 @@
 				D5A143A024C59DA600F367FC /* ParallaxHeaderMode.swift */,
 			);
 			path = ParallaxHeader;
+			sourceTree = "<group>";
+		};
+		D5A143A424C689DA00F367FC /* book */ = {
+			isa = PBXGroup;
+			children = (
+				D5A143A624C689F300F367FC /* ViewController */,
+				D5A143A524C689E900F367FC /* View */,
+			);
+			path = book;
+			sourceTree = "<group>";
+		};
+		D5A143A524C689E900F367FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5A143A624C689F300F367FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5A143A724C689FB00F367FC /* UBookViewController.swift */,
+				D5A143A924C68AED00F367FC /* UCollectListViewController.swift */,
+				D5A143AB24C68B0900F367FC /* UDocumentListViewController.swift */,
+				D5A143AD24C68B1A00F367FC /* UDownloadListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		D5EFF5D724C553060069E9E9 /* Model */ = {
@@ -585,8 +621,11 @@
 				D5EFF5E324C567350069E9E9 /* UBaseCollectionViewCell.swift in Sources */,
 				D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */,
 				65F21BD524C3E73D0062D930 /* SceneDelegate.swift in Sources */,
+				D5A143AE24C68B1A00F367FC /* UDownloadListViewController.swift in Sources */,
 				D5EFF5E924C56AEB0069E9E9 /* UPageViewController.swift in Sources */,
 				D5EFF5E724C567810069E9E9 /* UTopCCell.swift in Sources */,
+				D5A143AC24C68B0900F367FC /* UDocumentListViewController.swift in Sources */,
+				D5A143AA24C68AED00F367FC /* UCollectListViewController.swift in Sources */,
 				6500099624C3F70F007D6BB3 /* UBaseViewController.swift in Sources */,
 				D5EFF5D924C553160069E9E9 /* UModel.swift in Sources */,
 				D5EFF5D624C552CC0069E9E9 /* UAPI.swift in Sources */,
@@ -599,6 +638,7 @@
 				D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */,
 				D5A143A124C59DA600F367FC /* ParallaxHeaderMode.swift in Sources */,
 				D5EFF5DF24C566B20069E9E9 /* URefresh.swift in Sources */,
+				D5A143A824C689FB00F367FC /* UBookViewController.swift in Sources */,
 				D5EFF5F924C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				D5EFF5F424C56DF10069E9E9 /* UBaseTableViewHeaderFooterView.swift in Sources */,
 				6500099124C3F4AD007D6BB3 /* UIColorExtension.swift in Sources */,

@@ -17,16 +17,22 @@ class UTabBarController: UITabBarController {
         
         tabBar.isTranslucent = false
         
-        let classVC = UCateListViewController()
-        
-        addChildViewController(controller: classVC,
+        addChildViewController(controller: UCateListViewController(),
                                title: "分类",
                                image: UIImage(named: "tab_class"),
                                selectedImage: UIImage(named: "tab_class_S"))
         
-        let mineVC = UMineViewController()
+        /// 书架
+        let bookVC = UBookViewController(titles: ["收藏","书单","下载"],
+                                         vcs: [UCollectListViewController(),UDocumentListViewController(),UDownloadListViewController()],
+                                         pageStyle: .navgationBarSegment)
         
-        addChildViewController(controller: mineVC,
+        addChildViewController(controller: bookVC,
+                               title: "书架",
+                               image: UIImage(named: "tab_book"),
+                               selectedImage: UIImage(named: "tab_book_S"))
+        
+        addChildViewController(controller: UMineViewController(),
                                title: "我的",
                                image: UIImage(named: "tab_mine"),
                                selectedImage: UIImage(named: "tab_mine_S"))

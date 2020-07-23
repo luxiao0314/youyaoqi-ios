@@ -17,6 +17,19 @@ class UTabBarController: UITabBarController {
         
         tabBar.isTranslucent = false
         
+        /// 书架
+        let onePageVC = UHomeViewController(titles: ["推荐","VIP","订阅","排行"],
+                                            vcs:[URankListViewController(),
+                                                 URankListViewController(),
+                                                 URankListViewController(),
+                                                 URankListViewController()],
+                                            pageStyle: .navgationBarSegment)
+        
+        addChildViewController(controller:onePageVC,
+                               title: "首页",
+                               image: UIImage(named: "tab_home"),
+                               selectedImage: UIImage(named: "tab_home_S"))
+        
         addChildViewController(controller: UCateListViewController(),
                                title: "分类",
                                image: UIImage(named: "tab_class"),
@@ -24,7 +37,9 @@ class UTabBarController: UITabBarController {
         
         /// 书架
         let bookVC = UBookViewController(titles: ["收藏","书单","下载"],
-                                         vcs: [UCollectListViewController(),UDocumentListViewController(),UDownloadListViewController()],
+                                         vcs: [UCollectListViewController(),
+                                               UDocumentListViewController(),
+                                               UDownloadListViewController()],
                                          pageStyle: .navgationBarSegment)
         
         addChildViewController(controller: bookVC,

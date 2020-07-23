@@ -104,17 +104,7 @@ extension UMineViewController: UITableViewDelegate, UITableViewDataSource {
         let sectionArray = myArray[indexPath.section]
         let dict: [String: String] = sectionArray[indexPath.row]
         let title = dict["title"]
-        
-        switch indexPath.row {
-        case 0:
-            self.view.makeToast(title)
-            break
-        case 1:
-            self.view.makeToast(title)
-            break
-        default:
-            break
-        }
+        self.view.makeToast(title)
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

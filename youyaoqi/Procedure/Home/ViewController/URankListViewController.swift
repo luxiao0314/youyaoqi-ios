@@ -7,20 +7,17 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class URankListViewController: UBaseViewController {
     
     private var rankList = [RankingModel]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        loadData()
-    }
-    
     override func configUI() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
+        
+        self.tableView.uHead?.beginRefreshing()
     }
     
     lazy var tableView: UITableView = {
@@ -28,13 +25,21 @@ class URankListViewController: UBaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: URankTCell.self)
+        //URefreshHeader页面初始化会主动loadData
+        tableView.uHead = URefreshHeader{ [weak self] in self?.loadData() }
+        tableView.uempty = UEmptyView { [weak self] in self?.loadData() }
         return tableView
     }()
     
     private func loadData() {
         //请求排行列表
-        ApiLoadingProvider.request(UApi.rankList, model: RankinglistModel.self) { (returnData) in
+        ApiProvider.request(UApi.rankList, model: RankinglistModel.self) { (returnData) in
             self.rankList = returnData?.rankinglist ?? []
+            //停止刷新
+            self.tableView.uHead?.endRefreshing()
+            self.tableView.uempty?.allowShow = true
+            //重新加载数据
+            self.tableView.reloadData()
         }
     }
 }
@@ -49,6 +54,17 @@ extension URankListViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: URankTCell.self)
         cell.model = rankList[indexPath.row]
         return cell
+    }
+    
+    /**
+     不设置cell高度,切换页面会导致cell高度有问题
+     */
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return screenWidth * 0.4
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.view.makeToast(rankList[indexPath.row].title)
     }
     
 }

@@ -22,6 +22,8 @@
 		65F21BF524C3E73E0062D930 /* youyaoqiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F21BF424C3E73E0062D930 /* youyaoqiUITests.swift */; };
 		AEA8AA73F21726FC48C5381F /* Pods_youyaoqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA56212E1B30672CD779A271 /* Pods_youyaoqi.framework */; };
 		D59A8F7C24C93B0F00E31D6B /* URankTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F7B24C93B0F00E31D6B /* URankTCell.swift */; };
+		D59A8F7E24C96B2500E31D6B /* USubscibeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */; };
+		D59A8F8024C975D000E31D6B /* UComicCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F7F24C975D000E31D6B /* UComicCCell.swift */; };
 		D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439924C5953B00F367FC /* UMineViewController.swift */; };
 		D5A1439D24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */; };
 		D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */; };
@@ -87,6 +89,8 @@
 		65F21BF424C3E73E0062D930 /* youyaoqiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youyaoqiUITests.swift; sourceTree = "<group>"; };
 		65F21BF624C3E73E0062D930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D59A8F7B24C93B0F00E31D6B /* URankTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankTCell.swift; sourceTree = "<group>"; };
+		D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USubscibeListViewController.swift; sourceTree = "<group>"; };
+		D59A8F7F24C975D000E31D6B /* UComicCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicCCell.swift; sourceTree = "<group>"; };
 		D5A1439924C5953B00F367FC /* UMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
 		D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
 		D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 			children = (
 				D5A143B224C69AD600F367FC /* UHomeViewController.swift */,
 				D5A143B424C69B8400F367FC /* URankListViewController.swift */,
+				D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				D59A8F7B24C93B0F00E31D6B /* URankTCell.swift */,
+				D59A8F7F24C975D000E31D6B /* UComicCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -670,11 +676,13 @@
 				D5A1439D24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift in Sources */,
 				6500098D24C3EEB1007D6BB3 /* UTabBarController.swift in Sources */,
 				6500099424C3F6EF007D6BB3 /* UCateListViewController.swift in Sources */,
+				D59A8F8024C975D000E31D6B /* UComicCCell.swift in Sources */,
 				D5EFF5FB24C56EA70069E9E9 /* UBaseTableViewCell.swift in Sources */,
 				D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */,
 				D5A143A124C59DA600F367FC /* ParallaxHeaderMode.swift in Sources */,
 				D5EFF5DF24C566B20069E9E9 /* URefresh.swift in Sources */,
 				D5A143A824C689FB00F367FC /* UBookViewController.swift in Sources */,
+				D59A8F7E24C96B2500E31D6B /* USubscibeListViewController.swift in Sources */,
 				D5EFF5F924C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				D5EFF5F424C56DF10069E9E9 /* UBaseTableViewHeaderFooterView.swift in Sources */,
 				6500099124C3F4AD007D6BB3 /* UIColorExtension.swift in Sources */,

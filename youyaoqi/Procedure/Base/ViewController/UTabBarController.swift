@@ -21,7 +21,7 @@ class UTabBarController: UITabBarController {
         let onePageVC = UHomeViewController(titles: ["推荐","VIP","订阅","排行"],
                                             vcs:[URankListViewController(),
                                                  URankListViewController(),
-                                                 URankListViewController(),
+                                                 USubscibeListViewController(),
                                                  URankListViewController()],
                                             pageStyle: .navgationBarSegment)
         

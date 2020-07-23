@@ -26,6 +26,7 @@ class USubscibeListViewController: UBaseViewController {
         //URefreshHeader页面初始化会主动loadData
         tableView.uHead = URefreshHeader{ [weak self] in self?.loadData() }
         tableView.uempty = UEmptyView { [weak self] in self?.loadData() }
+        tableView.uFoot = URefreshTipKissFooter(with: "使用妖气币可以购买订阅漫画\nVIP会员购买还有优惠哦~")
         return tableView
     }()
     

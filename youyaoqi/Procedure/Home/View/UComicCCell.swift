@@ -9,7 +9,7 @@
 
 import UIKit
 
-class UComicCCell: UBaseTableViewCell {
+class UComicCCell: UBaseCollectionViewCell {
     
     lazy var iconView: UIImageView = {
         let iw = UIImageView()
@@ -68,10 +68,10 @@ class UComicCCell: UBaseTableViewCell {
         }
     }
     
-    var model: ComicListModel? {
+    var model: ComicModel? {
         didSet {
             guard let model = model else { return }
-            iconView.kf.setImage(urlString: model.titleIconUrl)
+            iconView.kf.setImage(urlString: model.url)
             titleLabel.text = "\(model.argName ?? "")榜"
             descLabel.text = model.itemTitle
         }

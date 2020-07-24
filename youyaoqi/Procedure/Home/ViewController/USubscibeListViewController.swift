@@ -13,21 +13,25 @@ class USubscibeListViewController: UBaseViewController {
     private var subscribeList = [ComicListModel]()
     
     override func configUI() {
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
-        self.tableView.uHead?.beginRefreshing()
+        view.addSubview(contentView)
+        contentView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
+        self.contentView.uHead?.beginRefreshing()
     }
     
-    lazy var tableView : UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(cellType: UComicCCell.self)
+    lazy var contentView : UICollectionView = {
+        let lt = UCollectionViewSectionBackgroundLayout()
+        lt.minimumInteritemSpacing = 5
+        lt.minimumLineSpacing = 10
+        let cw = UICollectionView(frame: CGRect.zero, collectionViewLayout: lt)
+        cw.delegate = self
+        cw.dataSource = self
+        cw.register(cellType: UComicCCell.self)
+        cw.register(supplementaryViewType: UComicCHead.self, ofKind: UICollectionView.elementKindSectionHeader)
         //URefreshHeader页面初始化会主动loadData
-        tableView.uHead = URefreshHeader{ [weak self] in self?.loadData() }
-        tableView.uempty = UEmptyView { [weak self] in self?.loadData() }
-        tableView.uFoot = URefreshTipKissFooter(with: "使用妖气币可以购买订阅漫画\nVIP会员购买还有优惠哦~")
-        return tableView
+        cw.uHead = URefreshHeader{ [weak self] in self?.loadData() }
+        cw.uempty = UEmptyView { [weak self] in self?.loadData() }
+        cw.uFoot = URefreshTipKissFooter(with: "使用妖气币可以购买订阅漫画\nVIP会员购买还有优惠哦~")
+        return cw
     }()
     
     private func loadData() {
@@ -35,30 +39,25 @@ class USubscibeListViewController: UBaseViewController {
         ApiProvider.request(UApi.subscribeList, model: SubscribeListModel.self) { (data) in
             self.subscribeList = data?.newSubscribeList ?? []
             
-            self.tableView.uempty?.allowShow = true
-            self.tableView.uHead?.endRefreshing()
+            self.contentView.uempty?.allowShow = true
+            self.contentView.uHead?.endRefreshing()
             //重新加载数据
-            self.tableView.reloadData()
+            self.contentView.reloadData()
         }
     }
 }
 
-extension USubscibeListViewController: UITableViewDataSource, UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subscribeList.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UComicCCell.self)
-        cell.model = subscribeList[indexPath.row]
+extension USubscibeListViewController: UCollectionViewSectionBackgroundLayoutDelegateLayout, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: UComicCCell.self)
+        let comicList = subscribeList[indexPath.section]
+        cell.model = comicList.comics?[indexPath.row]
         return cell
     }
     
-    /**
-     不设置cell高度,切换页面会导致cell高度有问题
-     */
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return screenWidth * 0.4
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return subscribeList.count
     }
 }

@@ -24,6 +24,7 @@
 		D59A8F7C24C93B0F00E31D6B /* URankTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F7B24C93B0F00E31D6B /* URankTCell.swift */; };
 		D59A8F7E24C96B2500E31D6B /* USubscibeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */; };
 		D59A8F8024C975D000E31D6B /* UComicCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F7F24C975D000E31D6B /* UComicCCell.swift */; };
+		D59A8F8224CA79C100E31D6B /* UComicCHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A8F8124CA79C100E31D6B /* UComicCHead.swift */; };
 		D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439924C5953B00F367FC /* UMineViewController.swift */; };
 		D5A1439D24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */; };
 		D5A1439F24C59D7F00F367FC /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */; };
@@ -91,6 +92,7 @@
 		D59A8F7B24C93B0F00E31D6B /* URankTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankTCell.swift; sourceTree = "<group>"; };
 		D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USubscibeListViewController.swift; sourceTree = "<group>"; };
 		D59A8F7F24C975D000E31D6B /* UComicCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicCCell.swift; sourceTree = "<group>"; };
+		D59A8F8124CA79C100E31D6B /* UComicCHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicCHead.swift; sourceTree = "<group>"; };
 		D5A1439924C5953B00F367FC /* UMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
 		D5A1439C24C59D6700F367FC /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
 		D5A1439E24C59D7F00F367FC /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				D59A8F7B24C93B0F00E31D6B /* URankTCell.swift */,
 				D59A8F7F24C975D000E31D6B /* UComicCCell.swift */,
+				D59A8F8124CA79C100E31D6B /* UComicCHead.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				D5A143B524C69B8400F367FC /* URankListViewController.swift in Sources */,
 				65F21BD524C3E73D0062D930 /* SceneDelegate.swift in Sources */,
 				D5A143AE24C68B1A00F367FC /* UDownloadListViewController.swift in Sources */,
+				D59A8F8224CA79C100E31D6B /* UComicCHead.swift in Sources */,
 				D59A8F7C24C93B0F00E31D6B /* URankTCell.swift in Sources */,
 				D5EFF5E924C56AEB0069E9E9 /* UPageViewController.swift in Sources */,
 				D5EFF5E724C567810069E9E9 /* UTopCCell.swift in Sources */,

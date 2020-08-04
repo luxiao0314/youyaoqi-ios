@@ -38,6 +38,7 @@
 		D5A143B524C69B8400F367FC /* URankListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A143B424C69B8400F367FC /* URankListViewController.swift */; };
 		D5EA026424D94E45008D35A3 /* UBaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA026324D94E45008D35A3 /* UBaseCollectionReusableView.swift */; };
 		D5EA026624D94F1A008D35A3 /* UComicCFoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA026524D94F1A008D35A3 /* UComicCFoot.swift */; };
+		D5EA026824D95258008D35A3 /* UVIPListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA026724D95258008D35A3 /* UVIPListViewController.swift */; };
 		D5EFF5D624C552CC0069E9E9 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5D524C552CC0069E9E9 /* UAPI.swift */; };
 		D5EFF5D924C553160069E9E9 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5D824C553160069E9E9 /* UModel.swift */; };
 		D5EFF5DC24C566500069E9E9 /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5DB24C566500069E9E9 /* UEmptyDataSet.swift */; };
@@ -108,6 +109,7 @@
 		D5A143B424C69B8400F367FC /* URankListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankListViewController.swift; sourceTree = "<group>"; };
 		D5EA026324D94E45008D35A3 /* UBaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UBaseCollectionReusableView.swift; path = youyaoqi/Procedure/Home/View/UBaseCollectionReusableView.swift; sourceTree = SOURCE_ROOT; };
 		D5EA026524D94F1A008D35A3 /* UComicCFoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicCFoot.swift; sourceTree = "<group>"; };
+		D5EA026724D95258008D35A3 /* UVIPListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIPListViewController.swift; sourceTree = "<group>"; };
 		D5EFF5D524C552CC0069E9E9 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
 		D5EFF5D824C553160069E9E9 /* UModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UModel.swift; sourceTree = "<group>"; };
 		D5EFF5DB24C566500069E9E9 /* UEmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UEmptyDataSet.swift; path = youyaoqi/Component/EmptyDataSet/UEmptyDataSet.swift; sourceTree = SOURCE_ROOT; };
@@ -393,6 +395,7 @@
 				D5A143B224C69AD600F367FC /* UHomeViewController.swift */,
 				D5A143B424C69B8400F367FC /* URankListViewController.swift */,
 				D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */,
+				D5EA026724D95258008D35A3 /* UVIPListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 				65F21BD324C3E73D0062D930 /* AppDelegate.swift in Sources */,
 				D5EFF5E524C5674F0069E9E9 /* URankCCell.swift in Sources */,
 				D5A143A324C59E0100F367FC /* UMineHead.swift in Sources */,
+				D5EA026824D95258008D35A3 /* UVIPListViewController.swift in Sources */,
 				D5EFF5DC24C566500069E9E9 /* UEmptyDataSet.swift in Sources */,
 				D5EFF5E324C567350069E9E9 /* UBaseCollectionViewCell.swift in Sources */,
 				D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */,

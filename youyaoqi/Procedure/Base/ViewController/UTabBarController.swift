@@ -19,7 +19,7 @@ class UTabBarController: UITabBarController {
         
         /// 书架
         let onePageVC = UHomeViewController(titles: ["推荐","VIP","订阅","排行"],
-                                            vcs:[URankListViewController(),
+                                            vcs:[UBoutiqueListViewController(),
                                                  UVIPListViewController(),
                                                  USubscibeListViewController(),
                                                  URankListViewController()],

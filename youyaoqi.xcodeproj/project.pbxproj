@@ -53,6 +53,8 @@
 		D5EFF5F724C56E350069E9E9 /* UCollectionViewAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5F624C56E350069E9E9 /* UCollectionViewAlignedLayout.swift */; };
 		D5EFF5F924C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5F824C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift */; };
 		D5EFF5FB24C56EA70069E9E9 /* UBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFF5FA24C56EA70069E9E9 /* UBaseTableViewCell.swift */; };
+		D5FCD58B24EB69E60083B292 /* UBoutiqueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCD58A24EB69E60083B292 /* UBoutiqueListViewController.swift */; };
+		D5FCD58D24EB70210083B292 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCD58C24EB70210083B292 /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		D5EFF5F624C56E350069E9E9 /* UCollectionViewAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectionViewAlignedLayout.swift; sourceTree = "<group>"; };
 		D5EFF5F824C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectionViewSectionBackgroundLayout.swift; sourceTree = "<group>"; };
 		D5EFF5FA24C56EA70069E9E9 /* UBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UBaseTableViewCell.swift; path = youyaoqi/Component/CollectionViewLayout/UBaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D5FCD58A24EB69E60083B292 /* UBoutiqueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueListViewController.swift; sourceTree = "<group>"; };
+		D5FCD58C24EB70210083B292 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		D894F94FDD87EE94810986B7 /* Pods-youyaoqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youyaoqi.debug.xcconfig"; path = "Target Support Files/Pods-youyaoqi/Pods-youyaoqi.debug.xcconfig"; sourceTree = "<group>"; };
 		DBD9B1FA68F93FB12B957E12 /* Pods-youyaoqi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youyaoqi.release.xcconfig"; path = "Target Support Files/Pods-youyaoqi/Pods-youyaoqi.release.xcconfig"; sourceTree = "<group>"; };
 		EA56212E1B30672CD779A271 /* Pods_youyaoqi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youyaoqi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				6500099024C3F4AD007D6BB3 /* UIColorExtension.swift */,
+				D5FCD58C24EB70210083B292 /* ArrayExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				D5A143B424C69B8400F367FC /* URankListViewController.swift */,
 				D59A8F7D24C96B2500E31D6B /* USubscibeListViewController.swift */,
 				D5EA026724D95258008D35A3 /* UVIPListViewController.swift */,
+				D5FCD58A24EB69E60083B292 /* UBoutiqueListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 				D5EFF5E324C567350069E9E9 /* UBaseCollectionViewCell.swift in Sources */,
 				D5A1439A24C5953B00F367FC /* UMineViewController.swift in Sources */,
 				D5A143B524C69B8400F367FC /* URankListViewController.swift in Sources */,
+				D5FCD58B24EB69E60083B292 /* UBoutiqueListViewController.swift in Sources */,
 				65F21BD524C3E73D0062D930 /* SceneDelegate.swift in Sources */,
 				D5EA026624D94F1A008D35A3 /* UComicCFoot.swift in Sources */,
 				D5A143AE24C68B1A00F367FC /* UDownloadListViewController.swift in Sources */,
@@ -699,6 +706,7 @@
 				D5EFF5DF24C566B20069E9E9 /* URefresh.swift in Sources */,
 				D5A143A824C689FB00F367FC /* UBookViewController.swift in Sources */,
 				D59A8F7E24C96B2500E31D6B /* USubscibeListViewController.swift in Sources */,
+				D5FCD58D24EB70210083B292 /* ArrayExtensions.swift in Sources */,
 				D5EFF5F924C56E460069E9E9 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				D5EFF5F424C56DF10069E9E9 /* UBaseTableViewHeaderFooterView.swift in Sources */,
 				6500099124C3F4AD007D6BB3 /* UIColorExtension.swift in Sources */,
